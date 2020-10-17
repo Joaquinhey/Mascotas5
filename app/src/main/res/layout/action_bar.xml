@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:elevation="4dp"
+    app:popupTheme="@style/Theme.AppCompat.Light">
+    <TextView
+        android:id="@+id/actionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mascotas"
+        android:layout_gravity="center"
+         />
+    <Button
+        android:id="@+id/btnFavoritos"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/estrella"
+        android:layout_gravity="right"
+        android:onClick="irFavoritos"
+        />
+    <Button
+        android:id="@+id/btnPata"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/pata"
+        android:layout_marginLeft="0dp"
+        android:layout_gravity="left"
+        />
+</androidx.appcompat.widget.Toolbar>
