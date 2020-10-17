@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <EditText
+        android:id="@+id/tvNombreCompleto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="Horacio Silvestre Quiroga Forteza, fue un cuentista, dramaturgo y poeta uruguayo. Fue uno de los maestros del cuento latinoamericano, de prosa vívida, naturalista y modernista.​ Sus relatos a menudo retratan a la naturaleza bajo rasgos temibles y horrorosos, como enemiga de las circunstancias del ser humano."
+        android:layout_marginTop="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        />
+
+
+
+</LinearLayout>
