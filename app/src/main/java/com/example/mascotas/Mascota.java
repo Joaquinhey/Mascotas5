@@ -1,16 +1,26 @@
 package com.example.mascotas;
 
-public class Mascotas {
+public class Mascota {
     private int idMascota;
     private String nombreMascota;
     private int fotoMascota;
+    private int id;
+    private int likes;
 
-    public Mascotas(int idMascota, String nombreMascota, int fotoMascota) {
+    public Mascota(int idMascota, String nombreMascota, int fotoMascota, int likes) {
         this.idMascota = idMascota;
         this.nombreMascota = nombreMascota;
         this.fotoMascota = fotoMascota;
+        this.likes = likes;
     }
 
+    public int getLikes() {        return likes;    }
+
+    public void setLikes(int likes) {        this.likes = likes;    }
+
+    public int getId() {return id;    }
+
+    public void setId(int id) {        this.id = id;    }
     public int getIdMascota() {
         return idMascota;
     }

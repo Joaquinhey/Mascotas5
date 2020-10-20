@@ -43,7 +43,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginStart="30dp" />
             <TextView
-                android:id="@+id/tvCounterLikes"
+                android:id="@+id/tvContadorLikes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Likes"
@@ -60,7 +60,7 @@
                 android:id="@+id/btnCountLikes"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:background="@drawable/perro1"
+                android:background="@drawable/like"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"

@@ -1,10 +1,6 @@
 package com.example.mascotas;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,7 +12,7 @@ import java.util.ArrayList;
 public class Favoritos extends AppCompatActivity {
 
     private RecyclerView list2Mascotas;
-    ArrayList<Mascotas> mascotas2;
+    ArrayList<Mascota> mascotas2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +45,9 @@ public class Favoritos extends AppCompatActivity {
     }
 
     public void init2Mascotas(){
-        mascotas2 = new ArrayList<Mascotas>();
-        mascotas2.add(new Mascotas(1,"Cougo",R.drawable.perro1));
-        mascotas2.add(new Mascotas(2,"Corujo",R.drawable.perro2));
+        mascotas2 = new ArrayList<Mascota>();
+        mascotas2.add(new Mascota(1,"Cougo",R.drawable.perro1, 2));
+        mascotas2.add(new Mascota(2,"Corujo",R.drawable.perro2, 3));
 
 
     }

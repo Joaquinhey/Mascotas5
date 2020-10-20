@@ -15,10 +15,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IRecyclerViewFragmentView{
 
     private RecyclerView listMascotas;
-    ArrayList<Mascotas> mascotas;
+    ArrayList<Mascota> mascotas;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,33 +33,21 @@ public class MainActivity extends AppCompatActivity {
 
 
         listMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
-
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-
-        listMascotas.setLayoutManager(llm);
-
-        initMascotas();
-        inicilizarAdaptador();
     }
 
     public void setSupportActionBar(Toolbar miActionBar) {
     }
 
-    private void inicilizarAdaptador(){
-        Adaptador adaptador = new Adaptador(mascotas,this);
-        listMascotas.setAdapter(adaptador);
-    }
-
+/*
     public void initMascotas(){
-        mascotas = new ArrayList<Mascotas>();
-        mascotas.add(new Mascotas(1,"Cougo",R.drawable.perro1));
-        mascotas.add(new Mascotas(2,"Corujo",R.drawable.perro2));
-        mascotas.add(new Mascotas(3,"Bergessio",R.drawable.perro3));
-        mascotas.add(new Mascotas(4,"Sebita",R.drawable.perro4));
+        mascotas = new ArrayList<Mascota>();
+        mascotas.add(new Mascota(1,"Cougo",R.drawable.perro1, likes));
+        mascotas.add(new Mascota(2,"Corujo",R.drawable.perro2, likes));
+        mascotas.add(new Mascota(3,"Bergessio",R.drawable.perro3, likes));
+        mascotas.add(new Mascota(4,"Sebita",R.drawable.perro4, likes));
 
     }
-
+*/
     public void irFavoritos(){
         Intent intent = new Intent(MainActivity.this, Favoritos.class);
         startActivity(intent);
@@ -87,5 +76,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void generarLinearLayoutVertical() {
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+
+        listMascotas.setLayoutManager(llm);
+    }
+
+    @Override
+    public Adaptador crearAdaptador(ArrayList<Mascota> mascotas) {
+        Adaptador adaptador = new Adaptador(mascotas,this);
+        return adaptador;
+    }
+
+    @Override
+    public void inicializarAdaptadorRV(Adaptador adaptador) {
+        listMascotas.setAdapter(adaptador);
     }
 }

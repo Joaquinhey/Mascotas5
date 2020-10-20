@@ -14,10 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class Adaptador extends RecyclerView.Adapter<Adaptador.MascotaViewHolder>{
-    ArrayList<Mascotas> mascotas;
+    ArrayList<Mascota> mascotas;
     Activity activity;
 
-    public Adaptador(ArrayList<Mascotas> mascotas, Activity activity){
+    public Adaptador(ArrayList<Mascota> mascotas, Activity activity){
         this.mascotas = mascotas;
         this.activity = activity;
     }
@@ -29,11 +29,10 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.MascotaViewHolder>
 
     @Override
     public void onBindViewHolder(final MascotaViewHolder mascotaViewHolder, int position) {
-        final Mascotas mascota = mascotas.get(position);
+        final Mascota mascota = mascotas.get(position);
         mascotaViewHolder.imgMascota.setImageResource(mascota.getFotoMascota());
         mascotaViewHolder.tvNombreMascota.setText(mascota.getNombreMascota());
-
-
+        mascotaViewHolder.tvContadorLikes.setText(String.valueOf(mascota.getLikes()) + " Likes");
         mascotaViewHolder.btnLikeMascota.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,19 +44,22 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.MascotaViewHolder>
     public int getItemCount() {
         return mascotas.size();
     }
+
     public static class MascotaViewHolder extends RecyclerView.ViewHolder{
         private ImageView imgMascota;
         private TextView tvNombreMascota;
-        private TextView tvCounterLikes;
+        private TextView tvContadorLikes;
         private ImageButton btnLikeMascota;
+
 
         public MascotaViewHolder(View itemView){
             super(itemView);
 
             imgMascota = (ImageView) itemView.findViewById(R.id.imgMascota);
             tvNombreMascota = (TextView) itemView.findViewById(R.id.tvNombreMascota);
-            tvCounterLikes = (TextView) itemView.findViewById(R.id.tvCounterLikes);
+            tvContadorLikes = (TextView) itemView.findViewById(R.id.tvContadorLikes);
             btnLikeMascota = (ImageButton) itemView.findViewById(R.id.btnLikeMascota);
+
         }
     }
 }
