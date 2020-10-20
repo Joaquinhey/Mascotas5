@@ -14,6 +14,7 @@ public class RecyclerViewFragmentPresenter implements IRecyclerViewFragmentPrese
     public RecyclerViewFragmentPresenter (IRecyclerViewFragmentView iRecyclerViewFragmentView, Context contexto){
        this.iRecyclerViewFragmentView = iRecyclerViewFragmentView;
        this.context = context;
+       obtenerMascotas();
     }
 
     @Override
@@ -26,5 +27,6 @@ public class RecyclerViewFragmentPresenter implements IRecyclerViewFragmentPrese
     @Override
     public void mostrarMascotas() {
         iRecyclerViewFragmentView.inicializarAdaptadorRV(iRecyclerViewFragmentView.crearAdaptador(mascotas));
+        iRecyclerViewFragmentView.generarLinearLayoutVertical();
     }
 }

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements IRecyclerViewFrag
 
     private RecyclerView listMascotas;
     ArrayList<Mascota> mascotas;
-
+    private IRecyclerViewFragmentPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements IRecyclerViewFrag
 
 
         listMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
+        presenter = new RecyclerViewFragmentPresenter(MainActivity.this, getBaseContext());
     }
 
     public void setSupportActionBar(Toolbar miActionBar) {
