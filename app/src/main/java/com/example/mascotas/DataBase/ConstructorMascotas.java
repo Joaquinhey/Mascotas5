@@ -23,22 +23,22 @@ public class ConstructorMascotas {
 
     public void insertarcontactos(BaseDatos db) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put(ConstantesBD.TABLE_MASCOTAS_NOMBRE , "Patas");
+        contentValues.put(ConstantesBD.TABLE_MASCOTAS_NOMBRE , "Corujo");
         contentValues.put(ConstantesBD.TABLE_MASCOTAS_FOTO , R.drawable.perro1);
         db.insertarcontacto(contentValues);
 
         contentValues = new ContentValues();
-        contentValues.put(ConstantesBD.TABLE_MASCOTAS_NOMBRE , "Tomy");;
+        contentValues.put(ConstantesBD.TABLE_MASCOTAS_NOMBRE , "Desarmando");;
         contentValues.put(ConstantesBD.TABLE_MASCOTAS_FOTO , R.drawable.perro2);
         db.insertarcontacto(contentValues);
 
         contentValues = new ContentValues();
-        contentValues.put(ConstantesBD.TABLE_MASCOTAS_NOMBRE , "Seis");
+        contentValues.put(ConstantesBD.TABLE_MASCOTAS_NOMBRE , "Cougo");
         contentValues.put(ConstantesBD.TABLE_MASCOTAS_FOTO , R.drawable.perro3);
         db.insertarcontacto(contentValues);
 
         contentValues = new ContentValues();
-        contentValues.put(ConstantesBD.TABLE_MASCOTAS_NOMBRE , "Sasha");
+        contentValues.put(ConstantesBD.TABLE_MASCOTAS_NOMBRE , "Laborda");
         contentValues.put(ConstantesBD.TABLE_MASCOTAS_FOTO , R.drawable.perro4);
         db.insertarcontacto(contentValues);
 
