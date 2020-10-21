@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <item
-        android:id="@+id/mContacto"
-        android:title="Contacto"
-        android:orderInCategory="1"
-        >Contacto</item>
-
+        android:id="@+id/Contacto"
+        android:title="Mascota"
+        android:orderInCategory="100">
+    </item>
     <item
-        android:id="@+id/mAbout"
-        android:title="Acerca de"
-        android:orderInCategory="2"
-        > Acerca de</item>
-
+        android:id="@+id/About"
+        android:title="About"
+        android:orderInCategory="101">
+    </item>
+    <item
+        android:id="@+id/Favoritos"
+        android:title="Favoritos"
+        android:orderInCategory="102"
+        app:showAsAction="always"
+        android:icon="@drawable/pata"/>
 </menu>
